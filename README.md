@@ -3,7 +3,7 @@
 ***
 ### Лабораторная_1
 #### Диаграмма Рамус
-![none](https://github.com/viveber/VeberVA/blob/main/диаграмма%20рамус.png)
+![none](https://github.com/viveber/VeberVA/blob/main/диаграмма%20рамус.png) .
 Портной шьёт брюки из ткани на швейной машине по выкройке.
 
 #### Диаграмма классов

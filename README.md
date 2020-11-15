@@ -15,6 +15,13 @@
 
 ***
 ### Лабораторная_2
+#### IDEF0
+![none](https://github.com/viveber/VeberVA/blob/main/lab2/рамус1.png)
 
+#### "Plan-Do-Check"
+![none](https://github.com/viveber/VeberVA/blob/main/lab2/рамус2.png)
+
+#### Диаграмма прецедентов
+![none](https://github.com/viveber/VeberVA/blob/main/lab2/даиграмма%20прецедентов.png)
 ***
 ### Лабораторная_3

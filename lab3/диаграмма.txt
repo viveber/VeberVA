@@ -1,0 +1,25 @@
+@startuml
+skinparam actor {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+autonumber
+
+actor "Дизайнер" as user
+boundary "IT-специалист проекта" as app
+control "инструменты" as http
+control "план квартиры" as web
+control "ПО" as php
+entity "Пожелания клиента" as mem
+control "Команда проекта" as lead
+boundary "Проект ремонта" as model
+
+user -> app: Задача
+app -> mem: Инструменты для замера квартиры
+mem -> web:анализ 
+web -> http: Конфликт / нехватка данных 
+web -> php : занесение данных в программу
+web -> model : эмуляция проекта
+app ->mem : проект ремонта
+@enduml

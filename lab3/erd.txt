@@ -1,0 +1,38 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+
+class Entity as "Потоки"
+
+class in as "Входящие"
+class control as "Управляющие"
+class out as "Выходящие"
+
+class ResIn as "Ресурсы (файлы)"
+class ResOut as "Ресурсы (файлы)"
+
+class B1 as "Образцы \n материалов"
+class B2 as "План \n квартиры"
+class C2 as "Стандарты \n и \n нормы"
+class D1 as "Модель \n проекта \n ремонта"
+
+Entity <|-- in
+Entity <|-- control
+Entity <|-- out
+
+in <|-- ResIn
+control <|-- C2
+out <|-- ResOut
+
+
+ResIn <|-- B1
+ResIn <|-- B2
+ResOut <|-- D1
+
+hide members
+hide circle
+hide methods
+@enduml

@@ -1,5 +1,6 @@
 # Вебер Виктория ИДБ-17-07
 ## [Семинары](https://github.com/viveber/VeberVA/blob/main/Семинары.md)
+## [Семинары](https://github.com/viveber/VeberVA/blob/main/Random.md
 ## Отчет о лабораторных работах
 ***
 ### Лабораторная_1

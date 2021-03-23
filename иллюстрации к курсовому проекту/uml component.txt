@@ -1,0 +1,39 @@
+@startuml
+component Актуаторы { 
+[Датчики] as D
+[Исполнители] as Isp
+} 
+component [Микроконтроллер] as M
+component [Сервер] as S
+component [Информационная база] as DB
+component [Работник] as W
+
+() "Данные" as I1
+() "Команда" as I2
+() "Команда исполнителю" as I3
+() "Данные с датчиков" as I4
+() "Все данные" as I5
+() "Обслуживание" as I6
+() "Сообщение об ошибке" as I7
+() "Журнал состояний" as I8
+
+D -- I1
+M -- I4
+M - I2
+I3 --S
+S -- I5
+S -- I7
+I6 -- W
+DB - I8
+
+I2 <- Isp
+M -> I1
+M --> I3
+I4 <-- S
+I5 <-- DB
+S -> I6
+M --> I6
+Isp --> I6
+I7 <- W
+I8 <- W
+@enduml

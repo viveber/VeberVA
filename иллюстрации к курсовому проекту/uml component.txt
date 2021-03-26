@@ -1,39 +1,28 @@
 @startuml
-component Актуаторы { 
-[Датчики] as D
-[Исполнители] as Isp
-} 
+component [Датчики] as D
+component [Актуаторы] as A
 component [Микроконтроллер] as M
 component [Сервер] as S
 component [Информационная база] as DB
-component [Работник] as W
+component [Web-приложение] as W
 
-() "Данные" as I1
-() "Команда" as I2
-() "Команда исполнителю" as I3
-() "Данные с датчиков" as I4
-() "Все данные" as I5
-() "Обслуживание" as I6
-() "Сообщение об ошибке" as I7
-() "Журнал состояний" as I8
+() "wi-fi" as I1
+() "wi-fi" as I2
+() "wi-fi" as I3
+() "LAN" as I4
+() "LAN" as I5
+() "LAN" as I6
 
-D -- I1
-M -- I4
-M - I2
-I3 --S
-S -- I5
-S -- I7
-I6 -- W
-DB - I8
-
-I2 <- Isp
+I1 - D
+I3 <- A
+S - I3
 M -> I1
-M --> I3
-I4 <-- S
-I5 <-- DB
-S -> I6
-M --> I6
-Isp --> I6
-I7 <- W
-I8 <- W
+M -- I2
+I2 <-- S
+S -- I4
+I4 -- DB
+S - I5
+I5 - W
+DB - I6
+I6 - W
 @enduml
